@@ -1,7 +1,7 @@
 ---
 title: "Custom Sheet Metal & Ductwork"
 description: "Custom sheet metal and ductwork fabrication in Huntington Beach, CA. Plenums, transitions, kitchen exhaust hoods, and specialty fittings built to spec."
-image: "/img/photos/ductwork-run.jpg"
+image: "/img/photos/ductwork-run.webp"
 label: "08"
 weight: 8
 capabilities:
