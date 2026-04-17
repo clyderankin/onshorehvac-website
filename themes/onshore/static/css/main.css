@@ -671,7 +671,18 @@ img { max-width: 100%; display: block; }
   gap: 4px;
 }
 @media (max-width: 768px) {
-  .about-photos { grid-template-columns: 1fr; }
+  .about-photos {
+    grid-template-columns: 1fr;
+  }
+  .about-photos > img {
+    height: 200px;
+  }
+  .about-photos-stack {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-photos-stack img {
+    height: 150px;
+  }
 }
 
 /* ── DIVIDER ── */
