@@ -203,6 +203,8 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 2;
 }
+.hero-break { display: block; }
+@media (max-width: 768px) { .hero-break { display: inline; } }
 .hero .label { animation: fadeIn 0.4s ease both; }
 .hero h1 { animation: fadeIn 0.4s 0.05s ease both; margin-bottom: 1rem; color: #fff; }
 .hero-sub {
@@ -852,7 +854,7 @@ a.contact-big:hover { color: var(--c-blue); }
   .site-nav.open { display: flex; }
   .nav-toggle { display: flex; }
   .hero { min-height: auto; padding: 6.5rem 0 3rem; }
-  .hero h1 br { display: none; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-direct { grid-template-columns: 1fr; }
