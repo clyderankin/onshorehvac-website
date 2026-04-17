@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="label">Contact</p>
+    <h1>Let's scope the work</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="contact-direct">
+      {{ with .Site.Params.phone }}
+      <div class="contact-block">
+        <p class="info-label">Phone</p>
+        <a href="tel:{{ . }}" class="contact-big">{{ . }}</a>
+      </div>
+      {{ end }}
+
+      {{ with .Site.Params.email }}
+      <div class="contact-block">
+        <p class="info-label">Email</p>
+        <a href="mailto:{{ . }}" class="contact-big">{{ . }}</a>
+      </div>
+      {{ end }}
+
+      {{ with .Site.Params.address }}
+      <div class="contact-block">
+        <p class="info-label">Office</p>
+        <p class="contact-big">{{ . }}</p>
+      </div>
+      {{ end }}
+
+      <div class="contact-block">
+        <p class="info-label">Emergency</p>
+        <p class="contact-big">24/7/365</p>
+      </div>
+
+      <div class="contact-block">
+        <p class="info-label">Office hours</p>
+        <p class="contact-big">Monday — Friday, 7:00 AM — 5:00 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

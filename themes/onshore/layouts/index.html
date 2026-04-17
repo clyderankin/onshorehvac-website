@@ -1,0 +1,296 @@
+{{ define "main" }}
+
+{{/* ── HERO ── */}}
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="/video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <p class="label">Design-Build &middot; HVAC &middot; Electrical &middot; Refrigeration &middot; Fabrication</p>
+    <h1>Commercial HVAC &amp; refrigeration<br>in Southern California</h1>
+    <p class="hero-sub">Family-owned. We design, build, and service systems for restaurants, theaters, schools, grow facilities, and everything in between across Southern California.</p>
+    <div class="hero-contact">
+      <a href="tel:{{ .Site.Params.phone }}" class="hero-phone">{{ .Site.Params.phone }}</a>
+      <a href="mailto:info@onshorehvac.com" class="hero-email">info@onshorehvac.com</a>
+    </div>
+  </div>
+</section>
+
+{{/* ── DESIGN-BUILD ── */}}
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">New construction &amp; design-build</p>
+      <h2>We don't just fix it &mdash; we build it</h2>
+    </div>
+    <div class="edge-grid reveal" style="margin-top:1.75rem;">
+      <div class="edge-item">
+        <h3>System design</h3>
+        <p>Load calculations, equipment selection, and mechanical drawings &mdash; engineered for your building, not pulled from a catalog.</p>
+      </div>
+      <div class="edge-item">
+        <h3>New construction</h3>
+        <p>Ground-up mechanical installs coordinated with GCs and architects from design through commissioning.</p>
+      </div>
+      <div class="edge-item">
+        <h3>Retrofit &amp; replacement</h3>
+        <p>Upgrade aging systems on your schedule. Phased installs, temporary cooling, zero disruption to your operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── HIGHLIGHTS ── */}}
+<section class="section highlights-section">
+  <div class="container">
+    <div class="highlights-grid reveal">
+      <div class="highlight-item">
+        <span class="highlight-marker">—</span>
+        <span class="highlight-title">Residential &amp; Commercial</span>
+        <span class="highlight-detail">Homes, businesses, and everything in between</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-marker">—</span>
+        <span class="highlight-title">In-house fabrication</span>
+        <span class="highlight-detail">Our own sheet metal shop — custom ductwork built to spec</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-marker">—</span>
+        <span class="highlight-title">All of Southern California</span>
+        <span class="highlight-detail">LA, Orange County, Inland Empire, and surrounding areas</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-marker">★</span>
+        <span class="highlight-title">5.0 on Google</span>
+        <span class="highlight-detail">24 reviews — real customers, real projects</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── LICENSES / EDGE ── */}}
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Why Onshore</p>
+      <h2>Three licenses, one contractor</h2>
+    </div>
+    <div class="edge-grid reveal" style="margin-top:1.75rem;">
+      <div class="edge-item">
+        <h3>C-20 &mdash; HVAC</h3>
+        <p>Design, new construction, retrofit, and ongoing service &mdash; all system types and tonnages.</p>
+      </div>
+      <div class="edge-item">
+        <h3>C-10 &mdash; Electrical</h3>
+        <p>We wire our own disconnects, controls, and panels. No waiting on a separate electrical sub.</p>
+      </div>
+      <div class="edge-item">
+        <h3>C-38 &mdash; Refrigeration</h3>
+        <p>Walk-in coolers, freezers, display cases, and process cooling &mdash; installed and serviced in-house.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── CLIENTS ── */}}
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Trusted by</p>
+      <h2>Private sector and public sector</h2>
+    </div>
+    <div class="clients-logos reveal">
+      <img src="/img/clients/regal.png" alt="Regal Cinemas" class="client-logo" loading="lazy">
+      <img src="/img/clients/regency.webp" alt="Regency Theaters" class="client-logo" loading="lazy">
+      <img src="/img/clients/metropolitan.png" alt="Metropolitan Theaters" class="client-logo" loading="lazy">
+      <img src="/img/clients/rusd.png" alt="Riverside Unified School District" class="client-logo" loading="lazy">
+      <img src="/img/clients/hawaiian-gardens.jpg" alt="City of Hawaiian Gardens" class="client-logo" loading="lazy">
+      <img src="/img/clients/college-ave-church.jpg" alt="College Ave Church" class="client-logo" loading="lazy">
+      <img src="/img/clients/ob-one-church.png" alt="OB One Church" class="client-logo" loading="lazy">
+      <img src="/img/clients/tannis.png" alt="Tannis Restaurant" class="client-logo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+{{/* ── SERVICES ── */}}
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">What we do</p>
+      <h2>Design, build, and service</h2>
+    </div>
+    <div class="card-grid reveal">
+      {{ range where .Site.RegularPages "Section" "services" }}
+      <a href="{{ .RelPermalink }}" class="card">
+        <span class="card-num">{{ .Params.label | default "—" }}</span>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── BRANDS ── */}}
+<section class="section section-alt">
+  <div class="container" style="text-align:center;">
+    <div class="reveal">
+      <p class="label" style="justify-content:center;">Brands we service</p>
+      <h2>Factory-trained on the equipment you run</h2>
+    </div>
+    <div class="brands-row reveal">
+      <img src="/img/brands/trane.png" alt="Trane" class="brand-logo" loading="lazy">
+      <img src="/img/brands/carrier.png" alt="Carrier" class="brand-logo" loading="lazy">
+      <img src="/img/brands/lennox.png" alt="Lennox" class="brand-logo" loading="lazy">
+      <img src="/img/brands/york.png" alt="York" class="brand-logo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{{/* ── INDUSTRIES ── */}}
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Industries we serve</p>
+      <h2>From movie theaters to grow rooms</h2>
+    </div>
+    <div class="card-grid reveal">
+      {{ range where .Site.RegularPages "Section" "industries" }}
+      <a href="{{ .RelPermalink }}" class="card">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── WORK PHOTOS ── */}}
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <p class="label" style="color:rgba(255,255,255,0.35);">Our work</p>
+      <h2 style="color:#fff;">See it for yourself</h2>
+    </div>
+    <div class="photo-grid reveal">
+      <div class="photo-grid-item photo-grid-tall">
+        <img src="/img/photos/crane-lift-van.webp" alt="Onshore van and crane lifting rooftop HVAC unit onto commercial building" loading="lazy">
+      </div>
+      <div class="photo-grid-item">
+        <img src="/img/photos/ductwork-install-commercial.webp" alt="Custom spiral ductwork installation in commercial space" loading="lazy">
+      </div>
+      <div class="photo-grid-item">
+        <img src="/img/photos/techs-rooftop-trane.webp" alt="Two Onshore technicians servicing a Trane rooftop unit" loading="lazy">
+      </div>
+      <div class="photo-grid-item">
+        <img src="/img/photos/tech-kitchen-ceiling.webp" alt="Technician servicing HVAC system in commercial kitchen" loading="lazy">
+      </div>
+      <div class="photo-grid-item photo-grid-tall">
+        <img src="/img/photos/branded-truck.webp" alt="Onshore Mechanical service truck loaded with ductwork" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── REVIEWS ── */}}
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">5.0 stars &middot; 24 reviews</p>
+      <h2>What our clients say</h2>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Sets the standard for reliable HVAC service. Owner is incredibly trustworthy and upfront with fair pricing, no surprises. Communication was excellent throughout. Exceptional attention to detail exceeded expectations."</p>
+        <p class="review-author">— Joe Doyle</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"As a general contractor, I use Brock's team on all projects. Great service and fair prices. I don't use any other HVAC company — Brock has me covered."</p>
+        <p class="review-author">— Cassidy S., General Contractor</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Our HVAC units from 1980–2000 were labeled unfixable by others. Onshore evaluated thoroughly and provided honest proposals. Surprisingly, they restored every unit to working condition."</p>
+        <p class="review-author">— Seth Dains, College Ave Church</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── SERVICE AREA ── */}}
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Service area</p>
+      <h2>All of Southern California</h2>
+      <p class="region-text">LA County, Orange County, Inland Empire, and surrounding areas.</p>
+    </div>
+    <div class="region-areas reveal-stagger reveal">
+      <span class="region-tag">Los Angeles</span>
+      <span class="region-tag">Orange County</span>
+      <span class="region-tag">Huntington Beach</span>
+      <span class="region-tag">San Diego</span>
+      <span class="region-tag">Long Beach</span>
+      <span class="region-tag">Anaheim</span>
+      <span class="region-tag">Irvine</span>
+      <span class="region-tag">Santa Ana</span>
+      <span class="region-tag">Costa Mesa</span>
+      <span class="region-tag">Riverside</span>
+      <span class="region-tag">San Bernardino</span>
+      <span class="region-tag">Pasadena</span>
+      <span class="region-tag">Torrance</span>
+      <span class="region-tag">Ontario</span>
+      <span class="region-tag">Temecula</span>
+    </div>
+  </div>
+</section>
+
+{{/* ── HOW WE WORK ── */}}
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">How we work</p>
+      <h2>Straightforward from start to finish</h2>
+    </div>
+    <div class="approach-grid reveal">
+      <div class="approach-item">
+        <span class="approach-num">01</span>
+        <h3>You call, we show up</h3>
+        <p>We walk your facility and figure out what you actually need.</p>
+      </div>
+      <div class="approach-item">
+        <span class="approach-num">02</span>
+        <h3>Clear quote</h3>
+        <p>Fixed price, scope spelled out. No surprise change orders.</p>
+      </div>
+      <div class="approach-item">
+        <span class="approach-num">03</span>
+        <h3>We do the work</h3>
+        <p>Scheduled around your operations so nothing shuts down.</p>
+      </div>
+      <div class="approach-item">
+        <span class="approach-num">04</span>
+        <h3>Ongoing support</h3>
+        <p>PM programs, emergency priority, a crew that knows your equipment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── CTA ── */}}
+<section class="section cta-section">
+  <div class="container reveal">
+    <h2>Let's talk about your building.</h2>
+    <p style="color:rgba(255,255,255,0.55); margin-bottom:1.5rem; position:relative; z-index:1;">New construction, retrofit, service contract, or something's broken right now — we're here.</p>
+    <a href="/contact/" class="btn">Get in touch</a>
+  </div>
+</section>
+
+{{ end }}

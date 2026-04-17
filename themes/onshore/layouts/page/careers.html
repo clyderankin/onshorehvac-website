@@ -1,0 +1,112 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="label">Careers</p>
+    <h1>Join the crew</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Why Onshore</p>
+      <h2>What it's like here</h2>
+    </div>
+    <div class="approach-grid reveal" style="margin-top:2rem;">
+      <div class="approach-item">
+        <span class="approach-num">01</span>
+        <h3>Real commercial work</h3>
+        <p>Theaters, restaurants, grow facilities, school districts. Not resi changeouts. Actual mechanical work you can take pride in.</p>
+      </div>
+      <div class="approach-item">
+        <span class="approach-num">02</span>
+        <h3>Family-run, not corporate</h3>
+        <p>You'll know the owner by name. Decisions happen fast. No layers of management between you and the work.</p>
+      </div>
+      <div class="approach-item">
+        <span class="approach-num">03</span>
+        <h3>Stable and growing</h3>
+        <p>Long-term service contracts. Consistent work year-round in Southern California. A company that's not going anywhere.</p>
+      </div>
+      <div class="approach-item">
+        <span class="approach-num">04</span>
+        <h3>We invest in our people</h3>
+        <p>Good tools, good trucks, and the training to grow. We want techs who stick around and build careers, not just fill seats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Open positions</p>
+      <h2>We're always hiring good people</h2>
+    </div>
+    <div class="card-grid reveal" style="margin-top:1.5rem;">
+      <div class="card">
+        <span class="card-num">Full-time</span>
+        <h3>Commercial HVAC Technician</h3>
+        <p>Service and repair commercial HVAC systems across Southern California. 3+ years commercial experience preferred. EPA 608 Universal certification required.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">Full-time</span>
+        <h3>HVAC Installer</h3>
+        <p>New construction and retrofit installations. Rooftop units, split systems, ductwork. Must be comfortable on roofs and with hand tools.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">Full-time</span>
+        <h3>Refrigeration Technician</h3>
+        <p>Walk-in coolers, freezers, ice machines, display cases. Restaurant and retail environments. Troubleshooting and PM work.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">Full-time</span>
+        <h3>Sheet Metal Fabricator</h3>
+        <p>Fabricate ductwork and fittings in our shop. Read plans, operate equipment, build to SMACNA standards. Experience with plasma tables a plus.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">Full-time</span>
+        <h3>Electrician (C-10)</h3>
+        <p>HVAC-related electrical — disconnects, controls wiring, panel work, 3-phase. Work alongside our HVAC crew on commercial installs.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">Entry level</span>
+        <h3>Apprentice / Helper</h3>
+        <p>Want to learn the trade? We'll train the right person. Must be reliable, willing to work hard, and ready to learn commercial mechanical work from the ground up.</p>
+      </div>
+      <div class="card" style="background:var(--c-accent); color:#fff;">
+        <span class="card-num" style="color:var(--c-blue);">Now hiring</span>
+        <h3 style="color:#fff;">Helpers — $18–$25/hr</h3>
+        <p style="color:rgba(255,255,255,0.6);">No experience needed. Show up on time, work hard, and we'll teach you the rest. Email <a href="mailto:info@onshorehvac.com" style="color:var(--c-blue);">info@onshorehvac.com</a> or call <a href="tel:{{ .Site.Params.phone }}" style="color:var(--c-blue);">{{ .Site.Params.phone }}</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid reveal">
+      <div>
+        <p class="label">Apply</p>
+        <h2>Get in touch</h2>
+        <p style="color:var(--c-text-dim); margin-top:0.5rem; max-width:400px;">Send us your info and a few lines about your experience. We'll get back to you within a couple days.</p>
+      </div>
+      <div class="contact-info">
+        <p class="info-label">Phone</p>
+        <p class="info-value">{{ .Site.Params.phone }}</p>
+        <p class="info-label">Email</p>
+        <p class="info-value">info@onshorehvac.com</p>
+        <p class="info-label">Stop by</p>
+        <p class="info-value">{{ .Site.Params.address }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container reveal">
+    <h2>Good people are hard to find.<br>So are good companies to work for.</h2>
+    <a href="/contact/" class="btn">Reach out</a>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="label">{{ .CurrentSection.Title }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="hero-sub">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+{{ with .Params.image }}
+<section class="section page-photo-section">
+  <div class="container">
+    <img src="{{ . }}" alt="{{ $.Title }}" class="page-photo reveal" loading="lazy">
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.capabilities }}
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="capabilities-grid reveal">
+      {{ range . }}
+      <div class="stat-item">
+        <p>{{ . }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section">
+  <div class="container content-narrow reveal">
+    {{ .Content }}
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container reveal">
+    <h2>Need this for your facility?</h2>
+    <a href="/contact/" class="btn">Get a quote</a>
+  </div>
+</section>
+{{ end }}

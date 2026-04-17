@@ -1,0 +1,52 @@
+baseURL = "https://onshorehvac.com/"
+languageCode = "en-us"
+title = "Onshore Mechanical, Inc."
+theme = "onshore"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Design-build HVAC, refrigeration, and electrical contractor in Huntington Beach, CA. Commercial and residential — new construction, retrofit, and service across Southern California."
+  phone = "(949) 536-0458"
+  email = "info@onshorehvac.com"
+  address = "7263 Murdy Cir, Huntington Beach, CA 92647"
+  tagline = "Three licenses. One crew. All of Southern California."
+  ogImage = "/img/logo.png"
+
+[params.social]
+  instagram = "onshorehvac"
+
+[menu]
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 1
+  [[menu.main]]
+    name = "Industries"
+    url = "/industries/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    name = "Careers"
+    url = "/careers/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]

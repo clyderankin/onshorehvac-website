@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <img src="/img/logo.png" alt="Onshore Mechanical" class="footer-logo-img">
+      <p class="footer-license">CA License #1078449</p>
+      <p class="footer-license-detail">C-20 HVAC &middot; C-38 Refrigeration &middot; C-10 Electrical</p>
+      <p class="footer-tagline">{{ .Site.Params.tagline }}</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Services</p>
+      {{ range where .Site.RegularPages "Section" "services" }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Industries</p>
+      {{ range where .Site.RegularPages "Section" "industries" }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Contact</p>
+      {{ with .Site.Params.phone }}<a href="tel:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with .Site.Params.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with .Site.Params.address }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} Onshore Mechanical, Inc. All rights reserved.</p>
+  </div>
+</footer>

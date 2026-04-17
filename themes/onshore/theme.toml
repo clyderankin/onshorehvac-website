@@ -1,0 +1,9 @@
+name = "Onshore"
+license = "MIT"
+licenselink = ""
+description = "Minimal corporate theme for commercial mechanical services."
+tags = ["corporate", "minimal", "commercial"]
+min_version = "0.120.0"
+
+[author]
+  name = "Onshore Mechanical"
