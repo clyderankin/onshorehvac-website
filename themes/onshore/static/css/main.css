@@ -583,6 +583,36 @@ img { max-width: 100%; display: block; }
   color: var(--c-text-dim);
 }
 
+/* ── HIRING BANNER ── */
+.hiring-banner {
+  background: var(--c-blue);
+  color: #fff;
+  padding: 0.75rem 0;
+  margin-top: 4.75rem;
+}
+.hiring-banner-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+.hiring-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+.hiring-banner a:hover {
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .hiring-banner-inner {
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.82rem;
+  }
+}
+
 /* ── PAGE PHOTO ── */
 .page-photo-section { padding-top: 0; padding-bottom: 0; }
 .page-photo {
