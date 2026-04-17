@@ -229,6 +229,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.02em;
   color: var(--c-blue);
   transition: color 0.15s;
+  align-self: flex-start;
 }
 .hero-phone:hover { color: var(--c-blue-hover); }
 .hero-email {
@@ -237,6 +238,7 @@ img { max-width: 100%; display: block; }
   color: #fff;
   letter-spacing: 0.02em;
   transition: color 0.15s;
+  align-self: flex-start;
 }
 .hero-email:hover { color: #fff; }
 .hero-actions {
